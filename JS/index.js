@@ -1,4 +1,4 @@
-import { convertAndFormatDate, numberFormatter } from './utils.js';
+import { convertAndFormatDate, formatNumber } from './utils.js';
 
 function setDate(cell, date) {
   cell.textContent = convertAndFormatDate(new Date(date));
@@ -16,7 +16,7 @@ function onDOMContentLoaded() {
   priceField.addEventListener('input', event => {
     priceCells.forEach((cell, index) => {
       const price = event.target.value * (index + 1);
-      cell.textContent = numberFormatter.format(price);
+      cell.textContent = formatNumber(price);
     });
   });
 

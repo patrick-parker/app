@@ -1,4 +1,4 @@
-import { convertAndFormatDate, numberFormatter } from './utils.js';
+import { convertAndFormatDate, formatNumber } from './utils.js';
 
 function getWindowQueryParameters() {
   return Object.fromEntries(
@@ -24,7 +24,7 @@ function onDOMContentLoaded() {
 
   priceCells.forEach((cell, index) => {
     const price = params.price * ((index % 10) + 1);
-    cell.textContent = numberFormatter.format(price);
+    cell.textContent = formatNumber(price);
   });
 }
 

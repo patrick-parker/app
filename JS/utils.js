@@ -7,6 +7,8 @@ export function convertAndFormatDate(date) {
   }).format(date);
 }
 
-export const numberFormatter = Intl.NumberFormat('en-US', {
-  useGrouping: true,
-});
+export function formatNumber(number) {
+  return Intl.NumberFormat('en-US', {
+    useGrouping: true,
+  }).format(number);
+}

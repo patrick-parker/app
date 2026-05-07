@@ -1,0 +1,21 @@
+table {
+  font-size: 15px;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 0.4em 0.5em;
+  text-align: center;
+}
+
+.date {
+  margin-right: 0.6em;
+}
+
+.span-row {
+  padding: 0.4em 0.9em;
+  text-align: right;
+}

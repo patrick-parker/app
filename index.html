@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles/receipt.css">
   <link rel="stylesheet" href="styles/general.css">
   <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/form.css">
 </head>
 
 <body>
@@ -60,7 +61,24 @@
           <td class="price-cell">720</td>
       </tbody>
     </table>
+  </div>
 
+  <div class="center">
+    <form>
+      <div class="fields">
+        <div class="field">
+          <label for="price">هزینه</label>
+          <input autofocus type="number" min="80" max="200" value="80"
+            placeholder="برای یک فرم چقدر هزینه دریافت میکنید؟" name="price" id="price">
+        </div>
+
+        <div class="field">
+          <label for="date">تاریخ</label>
+          <input type="date" name="date" id="date">
+        </div>
+      </div>
+      <input type="submit" value="چاپ">
+    </form>
   </div>
 </body>
 

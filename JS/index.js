@@ -15,7 +15,7 @@ function onDOMContentLoaded() {
     setDate(dateCell, event.target.value);
   });
   priceField.addEventListener('input', event => {
-    const newPrice = Number.parseInt(event.target.value);
+    const newPrice = Number.parseInt(event.target.value) || 0;
     priceInWords.textContent = formatNumber(newPrice * 1000);
     priceCells.forEach((cell, index) => {
       const price = newPrice * (index + 1);

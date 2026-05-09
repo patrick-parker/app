@@ -9,13 +9,16 @@ function onDOMContentLoaded() {
   const priceField = document.getElementById('price');
   const dateCell = document.querySelector('.date');
   const priceCells = document.querySelectorAll('.price-cell');
+  const priceInWords = document.getElementById('priceInWords');
 
   dateField.addEventListener('input', event => {
     setDate(dateCell, event.target.value);
   });
   priceField.addEventListener('input', event => {
+    const newPrice = Number.parseInt(event.target.value);
+    priceInWords.textContent = formatNumber(newPrice * 1000);
     priceCells.forEach((cell, index) => {
-      const price = event.target.value * (index + 1);
+      const price = newPrice * (index + 1);
       cell.textContent = formatNumber(price);
     });
   });
